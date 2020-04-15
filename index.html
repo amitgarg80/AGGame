@@ -1,11 +1,44 @@
 <html>
-  <meta http-equiv="refresh" content="10"/>
-  <head>
-  <title>AG Game v30 </title>
-</head>
-<body>
-  
-  <iframe src="https://docs.google.com/spreadsheets/d/1DLoHwtCwpvEHm_0s5jpJJYzAKy4Go2-xB_EJ-wapTbs/htmlembed/sheet?range=A23:T49&gid=822513081" width=1400 height=800></iframe>
 
-</body>
-</html>
+<meta http-equiv="refresh" content="20"/>
+<head>
+
+  <title>AG Game v30 </title>
+
+<script>
+var getParams = function (url) 
+{
+	var params = {};
+	var parser = document.createElement('a');
+	parser.href = url;
+	var query = parser.search.substring(1);
+	var vars = query.split('&');
+	for (var i = 0; i < vars.length; i++) {
+		var pair = vars[i].split('=');
+		params[pair[0]] = decodeURIComponent(pair[1]);
+	}
+	return params;
+};
+
+</script>
+
+
+</head>
+
+<body>
+
+<script>
+var txt = "https://docs.google.com/spreadsheets/d/1DLoHwtCwpvEHm_0s5jpJJYzAKy4Go2-xB_EJ-wapTbs/htmlembed/sheet?gid=" 
++ getParams(window.location.href).g + "&range=" + getParams(window.location.href).ra;
+
+//window.alert(1)
+//window.alert(getParams(window.location.href).range)
+//window.alert(txt)
+
+document.write("<iframe src=" + txt + " width=1400 height=800></iframe>");
+ 
+</script>
+
+
+
+</body></html>
