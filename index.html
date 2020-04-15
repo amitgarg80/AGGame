@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 
-<meta http-equiv="refresh" content="12"/>
+<meta http-equiv="refresh" content="100"/>
 <head>
 
   <title>AG Game v30 </title>
@@ -28,25 +29,30 @@ var getParams = function (url)
 <body>
 
 <script>
-var txt = "";
-window.alert(txt)
+var code = "102030";
+ 
+var basetext = "https://docs.google.com/spreadsheets/d/1DLoHwtCwpvEHm_0s5jpJJYzAKy4Go2-xB_EJ-wapTbs/htmlembed/sheet?";
+var gid = "gid=" + getParams(window.location.href).g;
+var range = "&range=" + getParams(window.location.href).ra;
 
-var code = "102030"; 
-window.alert(code)
+var txt = "";
+
+//window.alert(getParams(window.location.href).v)
+//window.alert(code.localeCompare(getParams(window.location.href).v))
+
+if (code.localeCompare(getParams(window.location.href).v) == 0) {
+
+//window.alert("success")
 	
-if (getParams(window.location.href).v = code) {
- txt = "https://docs.google.com/spreadsheets/d/1DLoHwtCwpvEHm_0s5jpJJYzAKy4Go2-xB_EJ-wapTbs/htmlembed/sheet?gid=" 
-+ getParams(window.location.href).g + "&range=" + getParams(window.location.href).ra;
+	txt = basetext + gid +  range;
+	document.write("<iframe src=" + txt + " width=1400 height=800></iframe>");
 }
 	
-//window.alert(1)
-//window.alert(getParams(window.location.href).range)
-window.alert(txt)
 
-document.write("<iframe src=" + txt + " width=1400 height=800></iframe>");
  
 </script>
 
 
 
 </body></html>
+
