@@ -2,6 +2,8 @@
 <html>
 
 <script>
+
+	
 var getParams = function (url) 
 {
 	var params = {};
@@ -19,7 +21,14 @@ var getParams = function (url)
 </script>
 
 <head>
-
+	
+<style>
+    iframe{
+        width: 100%;
+        border: 2px solid #ccc;
+    }
+</style>
+	
   <title>AG Game v30.3 </title>
 
 
@@ -50,7 +59,7 @@ if (code.localeCompare(getParams(window.location.href).v) == 0) {
 //window.alert("success")
 
 	txt = basetext + gid +  range;
-	document.write("<iframe src=" + txt + " onload=\"this.width=screen.width;this.height=screen.height;\"> </iframe>");
+	document.write("<iframe id=AG1 src=" + txt + " onload=\"this.width=screen.width;this.height=screen.height;\"> </iframe>");
 }
 	
 
@@ -67,6 +76,13 @@ var newref = 1000*getParams(window.location.href).refresh;
 if (newref > mintime-1) {
   default_ref= newref;
 //  window.alert(default_ref)
+}
+
+var iframe = document.getElementById("AG1");
+
+// Adjusting the iframe height onload event
+iframe.onload = function(){
+iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 }
 
 setTimeout(function(){
