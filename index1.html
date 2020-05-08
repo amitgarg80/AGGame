@@ -24,12 +24,12 @@ var getParams = function (url)
 	
 <style>
     iframe{
-        width: 100%;
-        border: 2px solid #ccc;
+        width: 150%;
+        heigth:150%;
     }
 </style>
 	
-  <title>AG Game v30.4 </title>
+  <title>AG Game v30.5 </title>
 
 
 
@@ -82,6 +82,7 @@ var iframe = document.getElementById("AG1");
 
 // Adjusting the iframe height onload event
 iframe.onload = function(){
+iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
 iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 }
 
