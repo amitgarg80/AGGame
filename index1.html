@@ -20,7 +20,7 @@ var getParams = function (url)
 
 <head>
 
-  <title>AG Game v30.2 </title>
+  <title>AG Game v30.3 </title>
 
 
 
@@ -50,7 +50,7 @@ if (code.localeCompare(getParams(window.location.href).v) == 0) {
 //window.alert("success")
 
 	txt = basetext + gid +  range;
-	document.write("<object data=" + txt + " width=" + width + " height=" + height+ "> </object>");
+	document.write("<iframe src=" + txt + " onload=\"this.width=screen.width;this.height=screen.height;\"> </iframe>");
 }
 	
 
