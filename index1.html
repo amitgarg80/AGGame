@@ -20,7 +20,7 @@ var getParams = function (url)
 
 <head>
 
-  <title>AG Game v30 </title>
+  <title>AG Game v30.2 </title>
 
 
 
@@ -53,10 +53,10 @@ if (code.localeCompare(getParams(window.location.href).v) == 0) {
 	
 var currFFZoom = 1;
 var currIEZoom = 100;
-var step = 0.02;
+var step = 1.0;
 currFFZoom += step;
 $('body').css('MozTransform','scale(' + currFFZoom + ')');
-var stepie = 2;
+var stepie = 100;
 currIEZoom += stepie;
 $('body').css('zoom', ' ' + currIEZoom + '%');
 
