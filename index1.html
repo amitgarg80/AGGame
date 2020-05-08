@@ -37,7 +37,9 @@ var gid = "gid=" + getParams(window.location.href).g;
 var range = "&range=" + getParams(window.location.href).ra;
 var width = getParams(window.location.href).w;
 var height = getParams(window.location.href).h;
-	
+width = 100%;
+height=100%;
+
 var txt = "";
 
 //window.alert(getParams(window.location.href).v)
@@ -71,9 +73,6 @@ setTimeout(function(){
    window.location.reload(1);
 }, default_ref);
 
-	
-var w = $(window), d = $(document), b = $('body');
-    window.resizeBy(0, ((b.height() - w.height()) || d.height() - w.height()));
 	
 </script>
 
