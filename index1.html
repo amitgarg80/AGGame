@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <script>
 
 	
@@ -15,6 +18,26 @@ var getParams = function (url)
 	return params;
 };
 
+</script>
+
+<head>
+	
+<style>
+    iframe{
+        width: 150%;
+        heigth:150%;
+    }
+</style>
+	
+  <title>AG Game v30.5 </title>
+
+
+
+</head>
+
+<body>
+
+<script>
 
 var code = "112233";
  
@@ -23,8 +46,8 @@ var gid = "gid=" + getParams(window.location.href).g;
 var range = "&range=" + getParams(window.location.href).ra;
 var width = getParams(window.location.href).w;
 var height = getParams(window.location.href).h;
-// width = screen.width;
-// heigth = this.height=screen.height;
+width = screen.width;
+heigth = this.height=screen.height;
 	
 var txt = "";
 
@@ -55,6 +78,13 @@ if (newref > mintime-1) {
 //  window.alert(default_ref)
 }
 
+var iframe = document.getElementById("AG1");
+
+// Adjusting the iframe height onload event
+iframe.onload = function(){
+iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
+iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+}
 
 setTimeout(function(){
    window.location.reload(1);
@@ -63,3 +93,6 @@ setTimeout(function(){
 	
 </script>
 
+
+
+</body></html>
