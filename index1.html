@@ -2,8 +2,6 @@
 <html>
 
 <script>
-
-	
 var getParams = function (url) 
 {
 	var params = {};
@@ -21,15 +19,8 @@ var getParams = function (url)
 </script>
 
 <head>
-	
-<style>
-    iframe{
-        width: 150%;
-        heigth:150%;
-    }
-</style>
-	
-  <title>AG Game v30.5 </title>
+
+  <title>AG Game v30.1 </title>
 
 
 
@@ -46,8 +37,6 @@ var gid = "gid=" + getParams(window.location.href).g;
 var range = "&range=" + getParams(window.location.href).ra;
 var width = getParams(window.location.href).w;
 var height = getParams(window.location.href).h;
-width = screen.width;
-heigth = this.height=screen.height;
 	
 var txt = "";
 
@@ -59,11 +48,10 @@ if (code.localeCompare(getParams(window.location.href).v) == 0) {
 //window.alert("success")
 
 	txt = basetext + gid +  range;
-	document.write("<iframe id=AG1 src=" + txt + " onload=\"this.width=screen.width;this.height=screen.height;\"> </iframe>");
+	document.write("<object data=" + txt + " width=" + width + " height=" + height+ "> </object>");
 }
 	
 
-	
 // For Setting REFRESH time for Page
 //Min is 5 sec, Default is 15 secs
 
@@ -78,19 +66,10 @@ if (newref > mintime-1) {
 //  window.alert(default_ref)
 }
 
-var iframe = document.getElementById("AG1");
-
-// Adjusting the iframe height onload event
-iframe.onload = function(){
-iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
-iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-}
-
 setTimeout(function(){
    window.location.reload(1);
 }, default_ref);
-
-	
+ 
 </script>
 
 
