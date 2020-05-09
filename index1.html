@@ -20,8 +20,17 @@ var getParams = function (url)
 
 <head>
 <style>
+
 	
-#ag1 {
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+	
+.video-container iframe {
     position: absolute;
     top:0;
     left: 0;
@@ -31,7 +40,7 @@ var getParams = function (url)
 	
 </style>
 
-  <title>AG Game v30.5 </title>
+  <title>AG Game v30.6 </title>
 
 
 
@@ -59,7 +68,7 @@ if (code.localeCompare(getParams(window.location.href).v) == 0) {
 //window.alert("success")
 
 	txt = basetext + gid +  range;
-	document.write("<div class=\"iframe1\"> <iframe id=\"ag1\" src=" + txt + " width=" + width + " height=" + height+ " frameborder=0 style=\"border:0\" scrolling=\"no\"> </iframe> </div>");
+	document.write("<div class=\"video-container\"> <iframe id=\"ag1\" src=" + txt + " width=" + width + " height=" + height+ " frameborder=0 style=\"border:0\" scrolling=\"no\"> </iframe> </div>");
 }
 	
 
